@@ -2,10 +2,12 @@ import { useEffect, type FC } from "react";
 
 import { Crepe } from "@milkdown/crepe";
 import { Milkdown, useEditor, useInstance } from "@milkdown/react";
-
 import "@milkdown/crepe/theme/common/style.css";
 import "@milkdown/crepe/theme/frame.css";
 import { getMarkdown, insert, replaceAll } from "@milkdown/kit/utils";
+
+import { saveNote } from '@/utils/saveNote';
+import { Note } from "@/Types/note";
 
 const markdown = `# Hello
 
@@ -15,17 +17,19 @@ how are you
 
 > I'm good, what about you??`;
 
-export const EditorControls: FC = () => {
+export const SaveButton: FC<{note: Note}> = ({note}) => {
   const [isLoading, getInstance] = useInstance();
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (isLoading) return;
 
     const editor = getInstance();
     if (!editor) return;
 
     const content = editor.action(getMarkdown());
-    console.log(content)
+    note.content = content
+
+    await saveNote({data : note})
   };
 
   return (
@@ -43,17 +47,12 @@ export const setEditor: FC<{content?: string}> = ({content}) => {
     const editor = get();
     if (!editor) return;
 
-    if (content) {
-      editor.action(replaceAll(""))
-      editor.action(insert(content))
-    } else {
-      editor.action(replaceAll(""))
-      editor.action(insert(markdown))
-    }
+    editor.action(replaceAll(""))
+    editor.action(insert(content ?? markdown))
 
   }, [loading, get, content])
 
-  return true;
+  return null;
 }
 
 export const MilkdownEditor: FC<{content?: string}> = (content) => {

@@ -38,11 +38,12 @@ function Home() {
         <h1 className='text-center text-3xl mb-5 font-bold'>SynciNote</h1>
         <p>A local first light weight note taking app with markdown support and syncs to your google drive to save data (if opted)</p>
       </div>
-      <button
-      className="self-center mt-auto mb-auto cursor-pointer bg-amber-400 hover:bg-amber-500 text-slate-900 transition w-30 h-10 shadow rounded"
+      <Link
+      to='/notes'
+      className="text-center self-center mt-auto mb-auto p-2 cursor-pointer bg-amber-400 hover:bg-amber-500 text-slate-900 transition w-30 h-10 shadow rounded"
       >
-        <Link to='/notes'>Click to Enter</Link>
-      </button>
+        Click to Enter
+      </Link>
 
     </div>
   )
