@@ -1,17 +1,16 @@
-import { createFileRoute, useNavigate } from '@tanstack/react-router'
+import { createFileRoute, Link, useNavigate } from '@tanstack/react-router'
 import { useEffect, useState } from 'react'
 import { MilkdownEditor, SaveButton } from '@/Components/MilkdownEditor'
 import { MilkdownProvider } from "@milkdown/react";
 import { getNotes } from '@/utils/getNotes';
 import { createNote } from '@/utils/createNote';
-import { deleteNote } from '@/utils/deleteNote';
 import DeleteButton from '@/Components/DeleteButton';
 
 export const Route = createFileRoute('/notes')({
   component: NotesRoot,
   loader: async () => {
     const notes = await getNotes()
-    console.log(notes)
+    // console.log(notes)
     return notes
   }
 })
@@ -33,7 +32,7 @@ function NotesRoot() {
   const [searchQuery, setSearchQuery] = useState('')
 
   const handleRename = async () => {
-    const newTitle = prompt("Enter a new title for the note:", curNote.title);
+    const newTitle = prompt("Enter a new title:", curNote.title);
     if (!newTitle || newTitle.trim() === "" || newTitle === curNote.title) return;
 
     const updatedNote = { ...curNote, title: newTitle };
@@ -61,7 +60,7 @@ function NotesRoot() {
       <div className='mb-4'>
         <div className='flex justify-between px-0.5'>
           <h2 className='text-2xl font-semibold text-gray-800 mb-3'>Notes</h2>
-          <h2>💰</h2>
+          <Link to="/syncPage">💰</Link>
         </div>
         <div className='relative'>
           <input

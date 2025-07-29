@@ -1,3 +1,5 @@
 node_modules
 .tanstack
 data
+*.env
+*.json

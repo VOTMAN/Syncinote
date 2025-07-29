@@ -13,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
     "@milkdown/crepe": "^7.15.1",
     "@milkdown/kit": "^7.15.1",
     "@milkdown/react": "^7.15.1",
@@ -23,13 +24,20 @@
     "@tanstack/react-start": "^1.126.0",
     "better-sqlite3": "^12.2.0",
     "daisyui": "^5.0.46",
+    "file-saver": "^2.0.5",
+    "googleapis": "^105.0.0",
+    "jszip": "^3.10.1",
     "postcss": "^8.5.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.11",
-    "vite": "^7.0.3"
+    "vite": "^7.0.3",
+    "zustand": "^5.0.6"
   },
   "devDependencies": {
+    "@types/gapi": "^0.0.47",
+    "@types/gapi.auth2": "^0.0.61",
+    "@types/gapi.client": "^1.0.8",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "typescript": "^5.8.3",
