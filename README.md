@@ -1,6 +1,6 @@
 # 📝 SynciNote – Local-First Markdown Editor
 
-SynciNote is a blazing-fast, privacy-focused note-taking app built with [TanStack Start](https://tanstack.com/start), and React. It stores all your notes locally in markdown files and gives you full control over your data.
+SynciNote is a blazing-fast, privacy-focused note-taking app built with [TanStack Start](https://tanstack.com/start), and React. It stores all your notes locally in markdown files and gives you full control over your data. Now with AI (Gemini)
 
 ## ⚡ Features
 
@@ -15,6 +15,8 @@ SynciNote is a blazing-fast, privacy-focused note-taking app built with [TanStac
 * Optional sync (in-work) /export to local filesystem
 
 * SQLite for data storage
+
+* Use Ai to help you write
 
 ## 📁 Project Structure
 
@@ -47,11 +49,18 @@ npm install
 npm run dev
 ```
 
+### .env
+
+In order to use the Ask Ai feature. You need to add your own gemini ai key
+
+```
+VITE_GEMINI_API_KEY="your_api_ley"
+```
+
 <br />
 
 ## 📦 Technologies Used
 
-&#x20;
 
 * [TanStack Start](https://tanstack.com/start)
 * React
@@ -61,7 +70,6 @@ npm run dev
 
 ## 🧠 Contributing
 
-&#x20;
 
 Feel free to open issues or submit pull requests to improve this app. Feedback is always welcome!
 
