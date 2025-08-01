@@ -36,7 +36,7 @@ function Home() {
     <div className='flex flex-col min-h-screen'>
       <div className='text-center mt-auto'>
         <h1 className='text-center text-3xl mb-5 font-bold'>SynciNote</h1>
-        <p>A local first light weight note taking app with markdown support and syncs to your google drive to save data (if opted)</p>
+        <p>A local first light weight note taking app with markdown support</p>
       </div>
       <Link
       to='/notes'

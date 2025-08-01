@@ -1,10 +1,11 @@
-import { createFileRoute, Link, useNavigate } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { useEffect, useState } from 'react'
 import { MilkdownEditor, SaveButton } from '@/Components/MilkdownEditor'
 import { MilkdownProvider } from "@milkdown/react";
 import { getNotes } from '@/utils/getNotes';
 import { createNote } from '@/utils/createNote';
 import DeleteButton from '@/Components/DeleteButton';
+import { AskAi } from '@/Components/AskAi';
 
 export const Route = createFileRoute('/notes')({
   component: NotesRoot,
@@ -120,11 +121,12 @@ function NotesRoot() {
         <main className='p-4 border min-h-screen flex flex-col'>
           <div className='flex justify-between items-center mb-4'>
             <span className='flex gap-3 '>
-              <button className='cursor-pointer ' onClick={() => setShowSidebar(!showSidebar)}>😄</button>
+              <button className='cursor-pointer' onClick={() => setShowSidebar(!showSidebar)}>😄</button>
               <span onClick={handleRename}>📋</span>
             </span>
             <p className='text-2xl font-bold overflow-x-hidden'>{curNote.title}</p>
             <span>
+              <AskAi/>
               <SaveButton note={curNote}/>
               <DeleteButton {...curNote}/>
             </span>
