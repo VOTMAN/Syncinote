@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite dev",
-    "build": "vite build --preset vercel",
+    "build": "vite build",
     "start": "vite start"
   },
   "keywords": [],
