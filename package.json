@@ -1,5 +1,5 @@
 {
-  "name": "code",
+  "name": "syncinote",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite dev",
     "build": "vite build",
-    "start": "vite start"
+    "start": "vite preview"
   },
   "keywords": [],
   "author": "",

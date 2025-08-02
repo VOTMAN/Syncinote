@@ -1,3 +1,4 @@
+import React from 'react'
 import { Note } from "@/Types/note"
 import { deleteNote } from "@/utils/deleteNote"
 

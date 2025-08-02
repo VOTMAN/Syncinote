@@ -1,5 +1,5 @@
+import React from 'react'
 import { useEffect, type FC } from "react";
-
 import { Crepe } from "@milkdown/crepe";
 import { Milkdown, useEditor, useInstance } from "@milkdown/react";
 import "@milkdown/crepe/theme/common/style.css";

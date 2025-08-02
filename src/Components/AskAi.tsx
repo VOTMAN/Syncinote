@@ -1,5 +1,6 @@
+import React from 'react'
 import { getStuffFromAi } from "@/utils/genStuffFromAi"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Loading } from "@/Components/Loading/Loading"
 import { useInstance } from "@milkdown/react";
 import { insert, replaceAll } from "@milkdown/kit/utils";

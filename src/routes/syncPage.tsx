@@ -1,3 +1,4 @@
+import React from 'react'
 import { getNotes } from '@/utils/getNotes'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import JSZip from "jszip"

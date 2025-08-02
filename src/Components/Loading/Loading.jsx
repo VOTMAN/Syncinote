@@ -1,3 +1,4 @@
+import React from 'react'
 import load from "./loading.png"
 
 export const Loading = () => {
